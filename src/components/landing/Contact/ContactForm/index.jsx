@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { Formik, Form, FastField, ErrorMessage } from 'formik';
-import Recaptcha from 'react-google-recaptcha';
 import * as Yup from 'yup';
 import { Button, Input } from 'components/common';
+import { formSpreeURL } from 'data/config';
 import { Error, Center, InputField } from './styles';
 
 export default () => (
@@ -21,21 +21,20 @@ export default () => (
         .email('Invalid email')
         .required('Email field is required'),
       message: Yup.string().required('Message field is required'),
-      recaptcha: Yup.string().required('Robots are not welcome yet!'),
     })}
     onSubmit={async ({ name, email, message }, { setSubmitting, resetForm, setFieldValue }) => {
       try {
         await axios({
           method: 'POST',
-          url: `${process.env.GATSBY_PORTFOLIO_FORMIK_ENDPOINT}`,
+          url: `${formSpreeURL}`,
           headers: {
-            'Content-Type': 'application/json',
+            Accept: 'application/json',
           },
-          data: JSON.stringify({
+          data: {
             name,
             email,
             message,
-          }),
+          },
         });
         setSubmitting(false);
         setFieldValue('success', true);
@@ -47,7 +46,7 @@ export default () => (
       }
     }}
   >
-    {({ values, touched, errors, setFieldValue, isSubmitting }) => (
+    {({ values, touched, errors, isSubmitting }) => (
       <Form>
         <InputField>
           <Input
@@ -88,17 +87,6 @@ export default () => (
           />
           <ErrorMessage component={Error} name="message" />
         </InputField>
-        {values.name && values.email && values.message && (
-          <InputField>
-            <FastField
-              component={Recaptcha}
-              sitekey={process.env.GATSBY_PORTFOLIO_RECAPTCHA_KEY}
-              name="recaptcha"
-              onChange={value => setFieldValue('recaptcha', value)}
-            />
-            <ErrorMessage component={Error} name="recaptcha" />
-          </InputField>
-        )}
         {values.success && (
           <InputField>
             <Center>

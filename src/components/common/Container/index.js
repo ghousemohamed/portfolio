@@ -13,3 +13,7 @@ export const Container = styled.div`
     width: 80%;
   }
 `;
+
+export const Title = styled.h1`
+  text-align: center;
+`;

@@ -1,83 +1,35 @@
 import React, { useContext } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import { ThemeContext } from 'providers/ThemeProvider';
-import { Container, Card, TitleWrap } from 'components/common';
-import Star from 'components/common/Icons/Star';
-import Fork from 'components/common/Icons/Fork';
-import { Wrapper, Grid, Item, Content, Stats, Languages } from './styles';
+import { Container, Card, Title } from 'components/common';
+import Tilt from 'react-tilt';
+import { Wrapper, Grid, Item, Image, ImageContainer, Content, Stack, TechComponent } from './styles';
+
+import { PROJECTS } from '../../../../env';
 
 export const Projects = () => {
   const { theme } = useContext(ThemeContext);
-  const {
-    github: {
-      viewer: {
-        repositories: { edges },
-      },
-    },
-  } = useStaticQuery(
-    graphql`
-      {
-        github {
-          viewer {
-            repositories(first: 8, orderBy: { field: STARGAZERS, direction: DESC }) {
-              edges {
-                node {
-                  id
-                  name
-                  url
-                  description
-                  stargazers {
-                    totalCount
-                  }
-                  forkCount
-                  languages(first: 3) {
-                    nodes {
-                      id,
-                      name
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    `
-  );
+  const edges = Object.entries(PROJECTS);
   return (
     <Wrapper as={Container} id="projects">
-      <h2>Projects</h2>
+      <Title>Work Experience</Title>
       <Grid>
-        {edges.map(({ node }) => (
-          <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer" theme={theme}>
-            <Card theme={theme}>
+        {edges.map(([projectName, { image, description, siteUrl, stack }], index) => (
+          <Item key={index} theme={theme}>
+            <Card theme={theme} reverse={index % 2 === 0}>
               <Content>
-                <h4>{node.name}</h4>
-                <p>{node.description}</p>
+                <h2>{projectName}</h2>
+                <p>{description}</p>
+                <Stack>
+                  {stack.map(tech => (
+                    <TechComponent key={tech}>{tech}</TechComponent>
+                  ))}
+                </Stack>
               </Content>
-              <TitleWrap>
-                <Stats theme={theme}>
-                  <div>
-                    <Star color={theme === "light" ? "#000" : "#fff"} />
-                    <span>{node.stargazers.totalCount}</span>
-                  </div>
-                  <div>
-                    <Fork color={theme === "light" ? "#000" : "#fff"} />
-                    <span>{node.forkCount}</span>
-                  </div>
-                </Stats>
-                <Stats theme={theme}>
-                  <Languages>
-                    {
-                      node.languages.nodes.map(({ id, name }) => (
-                        <span key={id}>
-                          {name}
-                        </span>
-                      ))
-                    }
-                  </Languages>
-                </Stats>
-              </TitleWrap>
+              <ImageContainer as="a" href={siteUrl} target="_blank" rel="noopener noreferrer">
+                <Tilt options={{ max: 20, scale: 1 }}>
+                  <Image src={image} />
+                </Tilt>
+              </ImageContainer>
             </Card>
           </Item>
         ))}

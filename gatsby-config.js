@@ -16,29 +16,11 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        typeName: 'GitHub',
-        fieldName: 'github',
-        url: 'https://api.github.com/graphql',
-        headers: {
-          Authorization: `bearer ${process.env.GATSBY_PORTFOLIO_GITHUB_TOKEN}`,
-        },
-        fetchOptions: {},
-      },
-    },
-    {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         color: config.themeColor,
-        showSpinner: false,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: config.googleAnalyticsID,
-        head: true,
+        showSpinner: true,
+        minimum: 0.4,
       },
     },
     {
@@ -72,5 +54,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    `gatsby-env-variables`,
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: 'ghouse-portfolio',
+      },
+    },
   ],
 };

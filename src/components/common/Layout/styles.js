@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const Global = createGlobalStyle`
   html {
@@ -625,4 +625,11 @@ export const Global = createGlobalStyle`
       }
     }
   }
+`;
+
+export const Particles = styled.div`
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
 `;
