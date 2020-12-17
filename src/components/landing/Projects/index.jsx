@@ -25,9 +25,14 @@ export const Projects = () => {
                   ))}
                 </Stack>
               </Content>
-              <ImageContainer as="a" href={siteUrl} target="_blank" rel="noopener noreferrer">
+              <ImageContainer
+                as="a"
+                href={siteUrl || 'https://ghousemohamed.tech'}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Tilt options={{ max: 20, scale: 1 }}>
-                  <Image src={image} />
+                  <Image src={image} alt="name" />
                 </Tilt>
               </ImageContainer>
             </Card>

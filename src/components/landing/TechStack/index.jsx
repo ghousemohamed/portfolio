@@ -17,7 +17,7 @@ export const TechStack = () => {
             <Card theme={theme}>
               <Content>
                 <p>{name}</p>
-                <Image src={image}></Image>
+                <Image src={image} alt="name"></Image>
               </Content>
             </Card>
           </Item>

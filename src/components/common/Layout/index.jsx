@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import ScrollToTop from 'react-scroll-to-top';
 import { ThemeContext } from 'providers/ThemeProvider';
 import { Footer } from 'components/theme';
 import { Global, Particles } from './styles';
@@ -87,8 +88,7 @@ export const Layout = ({ children }) => {
             mode: 'grab',
           },
           onclick: {
-            enable: true,
-            mode: 'push',
+            enable: false,
           },
           resize: true,
         },
@@ -99,19 +99,9 @@ export const Layout = ({ children }) => {
               opacity: 1,
             },
           },
-          bubble: {
-            distance: 400,
-            size: 40,
-            duration: 2,
-            opacity: 8,
-            speed: 3,
-          },
           repulse: {
             distance: 200,
             duration: 0.4,
-          },
-          push: {
-            particles_nb: 4,
           },
           remove: {
             particles_nb: 2,
@@ -125,13 +115,14 @@ export const Layout = ({ children }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // eslint-disable-next-line no-undef
-      particlesJS('particles-js', particlesConfig(theme));
+      // particlesJS('particles-js', particlesConfig(theme));
     }
   }, [theme]);
 
   return (
     <>
       <Global theme={theme} />
+      <ScrollToTop smooth style={{ padding: 10 }} />
       <Particles id="particles-js" />
       {children}
       <Footer />

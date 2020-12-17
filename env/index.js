@@ -8,6 +8,7 @@ module.exports = {
     { name: 'Sinatra', image: '/tech/sinatra.svg' },
     { name: 'Phoenix', image: '/tech/phoenix.svg' },
     { name: 'Elixir', image: '/tech/elixir.svg' },
+    { name: 'GraphQL', image: '/tech/graphql.svg' },
     { name: 'mongoDB', image: '/tech/mongodb.svg' },
     { name: 'mySQL', image: '/tech/mysql.svg' },
     { name: 'postgreSQL', image: '/tech/postgresql.svg' },
