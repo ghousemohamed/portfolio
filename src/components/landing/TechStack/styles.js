@@ -26,7 +26,6 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  max-width: 3rem;
   max-height: 3rem;
   min-height: 30px;
 `;

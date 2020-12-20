@@ -16,6 +16,13 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         color: config.themeColor,
@@ -59,6 +66,14 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: 'ghouse-portfolio',
+      },
+    },
+    {
+      resolve: 'gatsby-source-strapi',
+      options: {
+        apiURL: process.env.API_URL || 'http://localhost:1337',
+        contentTypes: [`article`, `category`, `writer`],
+        queryLimit: 1000,
       },
     },
   ],

@@ -1,6 +1,6 @@
 module.exports = {
   SKILLS: [
-    { name: 'ReactJS', image: '/tech/react.svg' },
+    { name: 'React/Native', image: '/tech/react.svg' },
     { name: 'Anuglar', image: '/tech/angular.svg' },
     { name: 'VueJS', image: '/tech/vuejs.svg' },
     { name: 'NodeJS', image: '/tech/nodejs.svg' },
@@ -8,6 +8,8 @@ module.exports = {
     { name: 'Sinatra', image: '/tech/sinatra.svg' },
     { name: 'Phoenix', image: '/tech/phoenix.svg' },
     { name: 'Elixir', image: '/tech/elixir.svg' },
+    { name: 'Flutter', image: '/tech/flutter.svg' },
+    { name: 'Django', image: '/tech/django.svg' },
     { name: 'GraphQL', image: '/tech/graphql.svg' },
     { name: 'mongoDB', image: '/tech/mongodb.svg' },
     { name: 'mySQL', image: '/tech/mysql.svg' },
@@ -16,7 +18,8 @@ module.exports = {
     { name: 'AWS', image: '/tech/aws.svg' },
     { name: 'GCP', image: '/tech/gcp.svg' },
     { name: 'Ansible', image: '/tech/ansible.svg' },
-    { name: 'Github', image: '/tech/github.svg' },
+    { name: 'Docker', image: '/tech/docker.svg' },
+    { name: 'Git/Github', image: '/tech/github.svg' },
     { name: 'Nginx', image: '/tech/nginx.svg' },
   ],
   PROJECTS: {
