@@ -32,7 +32,7 @@ export default ({ pageContext, data }) => {
         title={`Ghouse's Blog - ${pageContext.categoryName}`}
         location={`/blog/category/${pageContext.categoryName}`}
       />
-      <Header />
+      <Header blog />
       <Container>
         <Posts articles={articles} />
       </Container>

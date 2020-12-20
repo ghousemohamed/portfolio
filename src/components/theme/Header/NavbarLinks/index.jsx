@@ -4,17 +4,25 @@ import { ThemeContext } from 'providers/ThemeProvider';
 import ToggleTheme from 'components/theme/Header/ToggleTheme';
 import { Wrapper } from './styles';
 
-const NavbarLinks = ({ desktop }) => {
+const NavbarLinks = ({ desktop, blog }) => {
   const { theme } = useContext(ThemeContext);
 
   return (
     <Wrapper desktop={desktop} theme={theme}>
-      <AnchorLink href="#about">About</AnchorLink>
-      <AnchorLink href="#skillset">Skills</AnchorLink>
-      <AnchorLink href="#projects">Projects</AnchorLink>
+      {!blog && (
+        <>
+          <AnchorLink href="#about">About</AnchorLink>
+          <AnchorLink href="#skillset">Skills</AnchorLink>
+          <AnchorLink href="#projects">Projects</AnchorLink>
+        </>
+      )}
       <a href="/blog">Blog</a>
-      <AnchorLink href="#contact">Contact</AnchorLink>
-      <ToggleTheme />
+      {!blog && (
+        <>
+          <AnchorLink href="#contact">Contact</AnchorLink>
+          <ToggleTheme />
+        </>
+      )}
     </Wrapper>
   );
 };

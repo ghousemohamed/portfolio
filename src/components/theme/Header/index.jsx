@@ -4,15 +4,19 @@ import Hamburger from './Hamburger';
 import Sidebar from './Sidebar';
 import { Wrapper, Overlay } from './styles';
 
-export const Header = () => {
+export const Header = ({ blog }) => {
   const [sidebar, toggle] = useState(false);
 
   return (
     <Wrapper>
       <Overlay sidebar={sidebar} onClick={() => toggle(!sidebar)} />
-      <Navbar />
-      <Hamburger sidebar={sidebar} toggle={toggle} />
-      <Sidebar sidebar={sidebar} toggle={toggle} />
+      <Navbar blog={blog} />
+      {!blog && (
+        <>
+          <Hamburger sidebar={sidebar} toggle={toggle} />
+          <Sidebar sidebar={sidebar} toggle={toggle} />
+        </>
+      )}
     </Wrapper>
   );
 };

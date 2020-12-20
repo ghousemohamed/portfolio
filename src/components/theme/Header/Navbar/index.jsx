@@ -5,7 +5,7 @@ import { Container } from 'components/common';
 import NavbarLinks from '../NavbarLinks';
 import { Wrapper, Brand, Avatar } from './styles';
 
-const Navbar = () => {
+const Navbar = ({ blog }) => {
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -14,7 +14,7 @@ const Navbar = () => {
         <Avatar as="img" src="/avatar.jpeg" />
         Ghouse Mohamed
       </Brand>
-      <NavbarLinks desktop />
+      <NavbarLinks desktop blog={blog} />
     </Wrapper>
   );
 };

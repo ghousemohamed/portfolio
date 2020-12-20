@@ -39,7 +39,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Ghouse's Blog" location="/blog" />
-      <Header />
+      <Header blog />
       <Container>
         <CategoryContainer>
           <CategoryHeader>

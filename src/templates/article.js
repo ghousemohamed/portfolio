@@ -37,7 +37,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title={`Ghouse's Blog`} location="/blog/category/" />
-      <Header />
+      <Header blog />
       <Container>
         <PostImage
           alt={article.name}
