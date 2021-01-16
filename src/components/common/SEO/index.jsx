@@ -13,8 +13,8 @@ import {
   logo,
 } from 'data/config';
 
-export const SEO = ({ title = defaultTitle, description = defaultDescription, location = '' }) => {
-  const structuredDataOrganization = `{ 
+export const SEO = ({ title = defaultTitle, description = defaultDescription, location = '', canonicalUrl }) => {
+  const structuredDataOrganization = `{
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"legalName": "${legalName}",
@@ -64,6 +64,7 @@ export const SEO = ({ title = defaultTitle, description = defaultDescription, lo
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image:src" content={Thumbnail} />
       <script type="application/ld+json">{structuredDataOrganization}</script>
+      {canonicalUrl && <link rel="canonical" key={canonicalUrl} href={canonicalUrl} data-react-helmet="true" />}
       <link rel="publisher" href={socialLinks.github} />
       <title>{title}</title>
       <html lang="en" dir="ltr" />

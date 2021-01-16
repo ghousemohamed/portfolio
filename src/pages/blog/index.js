@@ -37,7 +37,7 @@ export default ({ data }) => {
   const articles = data.articles.edges;
   const categories = data.categories.edges;
   return (
-    <Layout>
+    <Layout blog>
       <SEO title="Ghouse's Blog" location="/blog" />
       <Header blog />
       <Container>

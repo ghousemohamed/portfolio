@@ -59,7 +59,10 @@ export const CategoryConatiner = styled.div`
   flex-direction: row;
   wrap: flex-wrap;
   margin-bottom: 15px;
-  width: max-content;
+  width: auto;
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const Category = styled.a`
@@ -81,6 +84,9 @@ export const PostSubHeader = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
 `;
 
 export const CategoryListItem = styled.a`

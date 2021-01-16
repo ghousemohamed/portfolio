@@ -25,7 +25,7 @@ module.exports = {
   PROJECTS: {
     JollyHQ: {
       slug: 'jollyhq',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      description: `Jolly is the online store for freelancers to package and sell their skills on-demand. Over 40,000 freelancers and consultants use Jolly.\n\nThey are backed by rock-solid investors like TechStars and Active Capital. Jolly enables freelancers to instantly start selling packages or recurring services, montly packages, weekly content, recurring consultation and more.\n\nBuilt reusable UI components using Material UI • Translated & Implemented Figma Design Screens • Developed a job application tracking system along with node.js and mongodb • Wrote Database maintenance tasks • Wrote Unit test modules in Jest • Architected Analytics Funnel using Segment & Google analytics • Implemented Cache Management library based on Redis • Integrated Stripe Connect to enable payments in the application • Transferred DevOps lifecycle events from CircleCI to Github Actions • Automated Deployments on commit in EC2 Instance using Capistrano • Engineered Cron Jobs that generate user reports on a user base of 40,000 users • Reduced Build Size of application by more than 50% by using Webpack Bundle Analyzer • Engineered Site Health Monitoring device using the Serverless framework with AWS Lambda, AWS Cloudwatch and AWS SES • Wrote Ansible scripts for future automations • Configured Nginx as a reverse proxy to serve all the services running on a EC2 Instance • Connected the analytics funnel to AWS Kinesis and AWS S3 • Implemented admin panel in a Ruby on Rails Application • Improved messaging system built on top of socket.io • Configured the application to be PWA Friendly, Led a team of interns and performed code reviews`,
       image: '/projects/JollyHQ.png',
       siteUrl: 'https://www.jollyhq.com/',
       stack: [
@@ -40,6 +40,7 @@ module.exports = {
         'AWS S3',
         'AWS EC2',
         'AWS Kinesis',
+        'Serverless',
         'Segment',
         'Material UI',
         'Ghost CMS',
@@ -47,15 +48,17 @@ module.exports = {
         'Github Actions',
         'Nginx',
       ],
+      timeframe: 'Jan 2020 - Current',
     },
     Awato: {
       slug: 'awato',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      description: `Awato is personalized career pathfinding platform that build individual plans and facilitates local connections. They have helped over 50,000 students find the right career path for them.\n\nBuilt a portfolio management service using Ruby on Rails and StimulusJS • Helped enable dual booting Hanami and Rails Application running on different ports • Assembled Dockerfile to run dual booted application on Local machine • Integrated Google drive and Dropbox file sharing • Translated multiple design screens to html/css templates with pixel perfect accuracy • Wrote tests for Controllers, Models and views • Integrated file storage system for the application with S3`,
       image: '/projects/Awato.png',
       siteUrl: 'https://awato.co/',
       stack: [
         'AngularJS',
         'Hanami',
+        'ROM',
         'PostgresQL',
         'Docker',
         'Ruby on Rails',
@@ -68,10 +71,19 @@ module.exports = {
         'Rspec',
         'Heroku',
       ],
+      timeframe: 'Nov 2020 - Current',
     },
+    // Experfy: {
+    //   slug: 'experfy',
+    //   description: `Incubated in Harvard Innovation Lab, Experfy specializes in pipelining and deploying the world's best AI and engineering talent at breakneck speed, with exceptional focus on quality and compliance. Over 30,000 vetted experts have been onboarded on their platform who are ready to work on AI roadmaps, algorithms, cryptocurrencies and data products.\n\nWorked alongside the Team lead to reduce the query timings • (Assisted) in reducing query timings by more than 80% • introduced ElasticSearch into the backend of the application • Indexed all the postgreSQL records in ElasticSearch • Understood and helped write ElasticSearch wrapper around search queries`,
+    //   siteUrl: 'https://www.experfy.com/',
+    //   image: '/projects/Experfy.png',
+    //   stack: ['EmberJS', 'Ruby on Rails', 'Elastic Search', 'mySQL', 'Rspec'],
+    //   timeframe: 'Dec 2020 - Current',
+    // },
     Glorii: {
       slug: 'glorii',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      description: `Glorii offers a structured approach to help kids aged 2-16 years evaluate their interest and passion through extracurricular activities. They offer courses that are carefully designed with world-class standards to cater to holistic learning & development from an early age. Thousands of parents have enrolled their kids on this platform to broaden their children's mindset and creativity.\n\nMigrated wordpress application hosted on Hostinger & Linode to AWS EC2 instance using mysql dumps with zero downtime • Setup CI/CD using Github Actions & Capistrano • Setup Openresty and wrote Lua scripts to generate SSL certificates for any subdomain on-the-fly • Designed and implemented profile dashboard screens for users • Setup Openresty as a reverse proxy to handle traffic from all possible subdomains • (Wrote) tests for Models, Views and Controllers`,
       image: '/projects/Glorii.png',
       siteUrl: 'https://glorii.co/',
       stack: [
@@ -89,10 +101,11 @@ module.exports = {
         'Ansible',
         'Nginx',
       ],
+      timeframe: 'Sept 2020 - Nov 2020',
     },
-    RVAHappyHours: {
+    'RVA HappyHours': {
       slug: 'rva-happy-hours',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      description: `RVA provides a way for tourists travelling to europe to find a restaurant/bar anywhere, and anytime. You can search for restaurants and bars based on location, that best fit your taste and schedule. Over 5,000 people use their website regularly to check up on restaurants that have opened up or are open at any given time.\n\nDebugged issues in Admin Panel • Deployed Application in Gigalixir • Refactored code as per latest coding guidelines for Elixir • Provided Support for pages facing downtime (500 Errors)`,
       image: '/projects/RVAHappyHours.png',
       siteUrl: 'https://www.rvahappyhours.com/',
       stack: [
@@ -106,17 +119,19 @@ module.exports = {
         'jQuery',
         'ExMock',
       ],
+      timeframe: 'Nov 2020 - Dec 2020',
     },
-    InstantAutographs: {
-      slug: 'instant-autographs',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-      image: '/projects/InstantAutographs.png',
-      siteUrl: 'https://www.instantautographs.com/',
-      stack: ['Ruby on Rails', 'PostgreSQL', 'Bootstrap 4', 'AWS S3', 'AWS SES', 'Heroku', 'RSpec'],
-    },
+    // 'Instant Autographs': {
+    //   slug: 'instant-autographs',
+    //   description: `Instant autographs is a platform where fans can purchase authentic, and celebrity backed autographs from their favourite celebrites. They have partnered with Upside foundation, Media Captial Technologies and many others to provide a new way for celebrities and fans to connect.\n\nPrototyped & built an Admin Panel to enable tracking order & shipping statuses • Integrated Paypal payments at checkout • Translated Dashboard Figma Designs to html/css templates • Performed site audits, increased performance by 10% by reducing the application build size • Streamlined the product checkout flow • Integrated SideKiq and implemented a Job processing Queue which generates reports on previous day’s orders and dispatches emails using AWS SES • Achieved 100% test coverage (using simpleCov) by adopting TDD principles.`,
+    //   image: '/projects/InstantAutographs.png',
+    //   siteUrl: 'https://www.instantautographs.com/',
+    //   stack: ['Ruby on Rails', 'PostgreSQL', 'Bootstrap 4', 'AWS S3', 'AWS SES', 'Heroku', 'RSpec'],
+    //   timeframe: 'June 2020 - Nov 2020',
+    // },
     Rishaba: {
       slug: 'rishaba',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      description: `Rishaba is part of the Butterfly Group, who manufacture Tableware and Kitchenware items. Which are then exported to the european union. They primarily provide manufacturing and mold design services to their clients. Among the other services they provide apart from this are - Industrial design, and manufacturing solutions.\n\nCompleted building the entire website with pixel perfect accuracy with GatsbyJS & AdobeXD Designs • Connected site to S3 and used Cloudfront as the CDN for the site • Enabled Automated Deployments using AWS-CLI • Maintained average score of above 90 for Lighthouse Site Audits • Made application PWA friendly`,
       image: '/projects/Rishaba.png',
       siteUrl: 'https://rishaba.in',
       stack: [
@@ -130,10 +145,19 @@ module.exports = {
         'AWS Route 53',
         'AWS Certificate Manager',
       ],
+      timeframe: 'Sept 2020 - Oct 2020',
+    },
+    'Maharastra State Energy Calculator': {
+      slug: 'Maharastra State Energy Calculator',
+      description: `The Maharastra State Energy Calculator-2050 is an energy scenario building tool, which aims to explore a range of potential future energy scenarios for India, for diverse energy demand and supply sectors, leading up to 2050.\n\n17 Energy Demand and Supply sectors, and 38 levers that will impact our energy system are available to the user. The tool offers a combination of choices which illustrate hundreds of energy pathways till the year 2050.\n\nMigrated the application from a private VPC running behind a firewall to a public VPC in Linode • Wrote Ansible roles to setup Linode server for deployment • Configured Nginx as a reverse proxy, optimized nginx performance using gzip compression, configured ssl options • Introduced fastCGI module to improve caching of static files`,
+      image: '/projects/energyCalculator.png',
+      siteUrl: 'https://calculator.mahadiscom.in/',
+      stack: ['Sinatra', 'Bootstrap', 'Nginx', 'Linode'],
+      timeframe: 'Oct 2020 - Nov 2020',
     },
     Roameo: {
       slug: 'roameo',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      description: `Roameo is a mobile application for frequent travellers. Travellers can scan their boarding pass to avail redeem points, which can then be used to avail coupons for movie tickets and food beverages. They have partnered with multiple brands which will make users travel experience - more exciting and memorable.\n\nCoordinated with the team, developed and built Boarding pass QR code scanner & parser in Ruby on Rails • Developed animations in React Native using React-spring • Translated & Implemented AdobeXD designs • Wrote Unit tests in RSpec`,
       image: '/projects/Roameo.png',
       siteUrl: 'https://roameo.club/',
       stack: [
@@ -149,10 +173,11 @@ module.exports = {
         'RSpec',
         'Selenium',
       ],
+      timeframe: 'Jan 2020 - March 2020',
     },
     ScanTheMarket: {
       slug: 'scan-the-market',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      description: `ScanTheMarket is a platform where users can make informed decisions about their investment decisions. Users can compare and calculate fixed-deposit rates and home loan rates from over 50 banks. The interest rates reflect the real time fluctuations in the market. The FD interest rates and the home loan rates are updated regularly on an automated basis.\n\nBuilt a FD rates, Home loan rates lookup and calculator application using Phoenix Liveview, Bootstrap, & python • Implemented a Scheduler using GenServer which scrapers bank information on a daily basis and updates the sitemap accordingly • Built a parser engine which parses bank information into a normalized format • Aggregated Bank information in postgreSQL database • Wrote a test suite for all the web scrapers and parsers in ExMock • Maintained Site Accessibility, performance and SEO scores`,
       image: '/projects/ScanTheMarket.png',
       siteUrl: 'https://scanthemarket.in',
       stack: [
@@ -166,34 +191,23 @@ module.exports = {
         'Github Actions',
         'Distillery',
       ],
-    },
-    StateEnergyCalculator: {
-      slug: 'Maharastra State Energy Calculator',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-      image: '/projects/energyCalculator.png',
-      siteUrl: 'https://calculator.mahadiscom.in/',
-      stack: ['Sinatra', 'Bootstrap', 'Nginx', 'Linode'],
+      timeframe: 'March 2020 - May 2020',
     },
     Beamdock: {
       slug: 'beamdock',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      description: `Beamdock provides a way for  businesses to plan and grow with a customer focused mindset. They provide tools to their users to manage customer feedback, schedule user interviews, notify users via email, white lable their domain and build their communities with a analytics focused approach. This customer management tool allows for the users of this platform to create a community around feature releases and major updates.\n\nEngineered Customer Feedback collection application for select clients • Deployed Application in a Linode instance and EC2 instance • Setup CI/CD Pipelines in Github Actions • Configured Nginx & Openresty as a reverse proxy • Wrote Lua Scripts to acquire SSL certificates on the fly for all possible subdomains • Configured a custom Intercom application • Built a email notification system for users • Integrated Calendly for user interview scheduling by writing custom Ruby library • Integrated Slack notifications for the users`,
       image: '/projects/Beamdock.png',
       siteUrl: 'https://beamdock.com',
       stack: ['Ruby on Rails', 'StimulusJS', 'AWS S3', 'AWS SES', 'Linode', 'MySql', 'Nginx', 'Lua', 'Openresty'],
+      timeframe: 'June 2020 - Sept 2020',
     },
     Acuments: {
       slug: 'acuments',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      description: `Acuments is a Software and mobile application consultancy agency. They provide solutions for various companies and startups alike.`,
       image: '/projects/Acuments.png',
       siteUrl: '',
       stack: ['Ruby', 'Middleman', 'Bootstrap', 'Nginx', 'Tech Blog'],
-    },
-    CommitLive: {
-      slug: 'commit-live',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-      image: '/projects/CommitLive.png',
-      siteUrl: 'https://commit.live',
-      stack: ['Ruby on Rails', 'RSpec', 'Bootstrap', 'Heroku', 'EC2', 'Capistrano', 'postgreSQL'],
+      timeframe: 'Jan 2020 - Current',
     },
   },
 };

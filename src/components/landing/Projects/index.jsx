@@ -2,7 +2,19 @@ import React, { useContext } from 'react';
 import { ThemeContext } from 'providers/ThemeProvider';
 import { Container, Card, Title } from 'components/common';
 import Tilt from 'react-tilt';
-import { Wrapper, Grid, Item, Image, ImageContainer, Content, Stack, TechComponent } from './styles';
+import {
+  Wrapper,
+  Grid,
+  Item,
+  Image,
+  ImageContainer,
+  Content,
+  Stack,
+  TechComponent,
+  ProjectName,
+  A,
+  Description,
+} from './styles';
 
 import { PROJECTS } from '../../../../env';
 
@@ -13,12 +25,17 @@ export const Projects = () => {
     <Wrapper as={Container} id="projects">
       <Title>Work Experience</Title>
       <Grid>
-        {edges.map(([projectName, { image, description, siteUrl, stack }], index) => (
+        {edges.map(([projectName, { image, description, siteUrl, stack, timeframe }], index) => (
           <Item key={index} theme={theme}>
             <Card theme={theme} reverse={index % 2 === 0}>
               <Content>
-                <h2>{projectName}</h2>
-                <p>{description}</p>
+                <ProjectName>
+                  <A href={`${siteUrl}`} rel="noreferrer" target="_blank">
+                    {projectName}
+                  </A>
+                </ProjectName>
+                <p>{timeframe}</p>
+                <Description>{description}</Description>
                 <Stack>
                   {stack.map(tech => (
                     <TechComponent key={tech}>{tech}</TechComponent>

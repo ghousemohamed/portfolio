@@ -6,7 +6,7 @@ import { Global, Particles } from './styles';
 import './particles.js';
 import './fonts.css';
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, blog }) => {
   const { theme } = useContext(ThemeContext);
 
   const particlesConfig = themeColor => {
@@ -115,9 +115,9 @@ export const Layout = ({ children }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // eslint-disable-next-line no-undef
-      // particlesJS('particles-js', particlesConfig(theme));
+      if (!blog) particlesJS('particles-js', particlesConfig(theme));
     }
-  }, [theme]);
+  }, [blog, theme]);
 
   return (
     <>

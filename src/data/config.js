@@ -1,6 +1,6 @@
 module.exports = {
   defaultTitle: 'Ghouse Mohamed',
-  logo: 'https://ghousemohamed.tech/favicon/favicon-512.png',
+  logo: 'https://ghousemohamed.tech/avatar.jpeg',
   author: 'Ghouse Mohamed',
   url: 'https://ghousemohamed.tech',
   legalName: 'Ghouse Mohamed',

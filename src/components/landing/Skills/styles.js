@@ -2,10 +2,17 @@ import styled from 'styled-components';
 import detailsIllustration from 'assets/illustrations/details.svg';
 
 export const Wrapper = styled.div`
+  margin-top: 65px !important;
   background-image: url(${detailsIllustration});
   background-size: contain;
   background-position: left top;
   background-repeat: no-repeat;
+`;
+
+export const Bio = styled.div`
+  font-size: 23px;
+  line-height: 33px;
+  color: ${({ theme }) => (theme === 'dark' ? 'white' : 'black')};
 `;
 
 export const SkillsWrapper = styled.div`
@@ -22,6 +29,9 @@ export const SkillsWrapper = styled.div`
 export const Details = styled.div`
   flex: 1;
   padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (max-width: 960px) {
     padding-left: unset;

@@ -49,6 +49,17 @@ export const Item = styled.div`
   }
 `;
 
+export const ProjectName = styled.h2`
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: none;
+  margin: 0px 0px 15px;
+`;
+
+export const A = styled.a`
+  color: black;
+`;
+
 export const Content = styled.div`
   padding: 1rem 0;
   min-height: 160px;
@@ -56,6 +67,10 @@ export const Content = styled.div`
   @media (max-width: 960px) {
     width: 100%;
   }
+`;
+
+export const Description = styled.p`
+  white-space: pre-wrap;
 `;
 
 export const Stack = styled.div`

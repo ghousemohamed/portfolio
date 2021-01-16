@@ -18,20 +18,12 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               id
               title
-              content
-              categories {
-                name
-              }
-              writer {
-                name
-              }
             }
           }
         }
         categories: allStrapiCategory {
           edges {
             node {
-              id
               name
             }
           }

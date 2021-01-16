@@ -22,6 +22,7 @@ export const blogPostQuery = graphql`
       id
       content
       title
+      canonicalUrl
       categories {
         name
       }
@@ -35,8 +36,8 @@ export const blogPostQuery = graphql`
 export default ({ data }) => {
   const article = data.strapiArticle;
   return (
-    <Layout>
-      <SEO title={`Ghouse's Blog`} location="/blog/category/" />
+    <Layout blog>
+      <SEO title={`Ghouse's Blog`} location="/blog/category/" canonicalUrl={article.canonicalUrl} />
       <Header blog />
       <Container>
         <PostImage

@@ -27,7 +27,7 @@ export const blogListQuery = graphql`
 export default ({ pageContext, data }) => {
   const articles = data.articles.edges;
   return (
-    <Layout>
+    <Layout blog>
       <SEO
         title={`Ghouse's Blog - ${pageContext.categoryName}`}
         location={`/blog/category/${pageContext.categoryName}`}
