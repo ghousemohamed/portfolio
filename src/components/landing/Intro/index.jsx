@@ -19,6 +19,9 @@ export const Intro = () => {
           <Button color="#8680FF" as={AnchorLink} href="#projects">
             View my work
           </Button>
+          <Button color="#8680FF" as="a" href="/blog">
+            My Blog
+          </Button>
         </Details>
         <Thumbnail>
           <img src={dev} alt="I’m Ghouse and I’m a Fullstack Developer!" />
