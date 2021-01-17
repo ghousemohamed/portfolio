@@ -37,7 +37,13 @@ export default ({ data }) => {
   const article = data.strapiArticle;
   return (
     <Layout blog>
-      <SEO title={`Ghouse's Blog`} location="/blog/category/" canonicalUrl={article.canonicalUrl} />
+      <SEO
+        title={article.title}
+        image={`https://ogi.sh/gzzIXzt5-?title=${article.title}&imageUrl=https%3A%2F%2Fsource.unsplash.com%2F04RhrsalOmU`}
+        description={article.content.slice(0, 100)}
+        location="/blog/category/"
+        canonicalUrl={article.canonicalUrl}
+      />
       <Header blog />
       <Container>
         <PostImage
