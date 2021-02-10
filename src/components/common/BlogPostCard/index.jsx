@@ -25,7 +25,7 @@ export const BlogPostCard = ({ article }) => (
       <PostLink href={`/blog/article/${article.title}`}>
         <h3>{article.title}</h3>
       </PostLink>
-      <p>{article.content.slice(0, 150)}...</p>
+      <p>{article.content && article.content.slice(0, 150)}</p>
       <CategoryConatiner>
         {article.categories.map(({ name }) => (
           <Category key={name} href={`/blog/category/${name}`}>
