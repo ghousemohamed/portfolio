@@ -22,7 +22,6 @@ export const blogPostQuery = graphql`
       id
       content
       title
-      canonicalUrl
       categories {
         name
       }
@@ -42,7 +41,6 @@ export default ({ data }) => {
         image={`https://ogi.sh/gzzIXzt5-?title=${article.title}&imageUrl=https%3A%2F%2Fsource.unsplash.com%2F04RhrsalOmU`}
         description={article.content.slice(0, 100)}
         location="/blog/category/"
-        canonicalUrl={article.canonicalUrl}
       />
       <Header blog />
       <Container>
